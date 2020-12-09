@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../libft/libft.h
+unistd.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+fcntl.h
+-
+
+/Users/cassunta/Desktop/21sh/parse_tokens.c
+sh.h
+/Users/cassunta/Desktop/21sh/sh.h
+
+/Users/cassunta/Desktop/21sh/sh.h
+libft.h
+/Users/cassunta/Desktop/21sh/libft.h
+
