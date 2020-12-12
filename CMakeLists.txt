@@ -64,4 +64,4 @@ add_executable(21sh
         libft/ft_toupper.c
         libft/ft_wordcount.c
         libft/get_next_line.c
-        libft/libft.h sh.h parse_tokens.c flag.c token.c)
+        libft/libft.h sh.h parse_tokens.c flag.c token.c semantica.c tree.c tree_ft.c ampersand.c pipe.c)

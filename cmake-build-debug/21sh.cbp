@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/cassunta/Desktop/21sh/ampersand.c">
+			<Option target="21sh"/>
+		</Unit>
 		<Unit filename="/Users/cassunta/Desktop/21sh/flag.c">
 			<Option target="21sh"/>
 		</Unit>
@@ -263,10 +266,22 @@
 		<Unit filename="/Users/cassunta/Desktop/21sh/parse_tokens.c">
 			<Option target="21sh"/>
 		</Unit>
+		<Unit filename="/Users/cassunta/Desktop/21sh/pipe.c">
+			<Option target="21sh"/>
+		</Unit>
+		<Unit filename="/Users/cassunta/Desktop/21sh/semantica.c">
+			<Option target="21sh"/>
+		</Unit>
 		<Unit filename="/Users/cassunta/Desktop/21sh/sh.h">
 			<Option target="21sh"/>
 		</Unit>
 		<Unit filename="/Users/cassunta/Desktop/21sh/token.c">
+			<Option target="21sh"/>
+		</Unit>
+		<Unit filename="/Users/cassunta/Desktop/21sh/tree.c">
+			<Option target="21sh"/>
+		</Unit>
+		<Unit filename="/Users/cassunta/Desktop/21sh/tree_ft.c">
 			<Option target="21sh"/>
 		</Unit>
 		<Unit filename="/Users/cassunta/Desktop/21sh/CMakeLists.txt">

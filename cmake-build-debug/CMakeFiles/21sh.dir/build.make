@@ -870,6 +870,71 @@ CMakeFiles/21sh.dir/token.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/21sh.dir/token.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cassunta/Desktop/21sh/token.c -o CMakeFiles/21sh.dir/token.c.s
 
+CMakeFiles/21sh.dir/semantica.c.o: CMakeFiles/21sh.dir/flags.make
+CMakeFiles/21sh.dir/semantica.c.o: ../semantica.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/21sh.dir/semantica.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/21sh.dir/semantica.c.o   -c /Users/cassunta/Desktop/21sh/semantica.c
+
+CMakeFiles/21sh.dir/semantica.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/21sh.dir/semantica.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cassunta/Desktop/21sh/semantica.c > CMakeFiles/21sh.dir/semantica.c.i
+
+CMakeFiles/21sh.dir/semantica.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/21sh.dir/semantica.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cassunta/Desktop/21sh/semantica.c -o CMakeFiles/21sh.dir/semantica.c.s
+
+CMakeFiles/21sh.dir/tree.c.o: CMakeFiles/21sh.dir/flags.make
+CMakeFiles/21sh.dir/tree.c.o: ../tree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/21sh.dir/tree.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/21sh.dir/tree.c.o   -c /Users/cassunta/Desktop/21sh/tree.c
+
+CMakeFiles/21sh.dir/tree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/21sh.dir/tree.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cassunta/Desktop/21sh/tree.c > CMakeFiles/21sh.dir/tree.c.i
+
+CMakeFiles/21sh.dir/tree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/21sh.dir/tree.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cassunta/Desktop/21sh/tree.c -o CMakeFiles/21sh.dir/tree.c.s
+
+CMakeFiles/21sh.dir/tree_ft.c.o: CMakeFiles/21sh.dir/flags.make
+CMakeFiles/21sh.dir/tree_ft.c.o: ../tree_ft.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/21sh.dir/tree_ft.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/21sh.dir/tree_ft.c.o   -c /Users/cassunta/Desktop/21sh/tree_ft.c
+
+CMakeFiles/21sh.dir/tree_ft.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/21sh.dir/tree_ft.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cassunta/Desktop/21sh/tree_ft.c > CMakeFiles/21sh.dir/tree_ft.c.i
+
+CMakeFiles/21sh.dir/tree_ft.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/21sh.dir/tree_ft.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cassunta/Desktop/21sh/tree_ft.c -o CMakeFiles/21sh.dir/tree_ft.c.s
+
+CMakeFiles/21sh.dir/ampersand.c.o: CMakeFiles/21sh.dir/flags.make
+CMakeFiles/21sh.dir/ampersand.c.o: ../ampersand.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/21sh.dir/ampersand.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/21sh.dir/ampersand.c.o   -c /Users/cassunta/Desktop/21sh/ampersand.c
+
+CMakeFiles/21sh.dir/ampersand.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/21sh.dir/ampersand.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cassunta/Desktop/21sh/ampersand.c > CMakeFiles/21sh.dir/ampersand.c.i
+
+CMakeFiles/21sh.dir/ampersand.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/21sh.dir/ampersand.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cassunta/Desktop/21sh/ampersand.c -o CMakeFiles/21sh.dir/ampersand.c.s
+
+CMakeFiles/21sh.dir/pipe.c.o: CMakeFiles/21sh.dir/flags.make
+CMakeFiles/21sh.dir/pipe.c.o: ../pipe.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/21sh.dir/pipe.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/21sh.dir/pipe.c.o   -c /Users/cassunta/Desktop/21sh/pipe.c
+
+CMakeFiles/21sh.dir/pipe.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/21sh.dir/pipe.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cassunta/Desktop/21sh/pipe.c > CMakeFiles/21sh.dir/pipe.c.i
+
+CMakeFiles/21sh.dir/pipe.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/21sh.dir/pipe.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cassunta/Desktop/21sh/pipe.c -o CMakeFiles/21sh.dir/pipe.c.s
+
 # Object files for target 21sh
 21sh_OBJECTS = \
 "CMakeFiles/21sh.dir/libft/ft_atoi.c.o" \
@@ -932,7 +997,12 @@ CMakeFiles/21sh.dir/token.c.s: cmake_force
 "CMakeFiles/21sh.dir/libft/get_next_line.c.o" \
 "CMakeFiles/21sh.dir/parse_tokens.c.o" \
 "CMakeFiles/21sh.dir/flag.c.o" \
-"CMakeFiles/21sh.dir/token.c.o"
+"CMakeFiles/21sh.dir/token.c.o" \
+"CMakeFiles/21sh.dir/semantica.c.o" \
+"CMakeFiles/21sh.dir/tree.c.o" \
+"CMakeFiles/21sh.dir/tree_ft.c.o" \
+"CMakeFiles/21sh.dir/ampersand.c.o" \
+"CMakeFiles/21sh.dir/pipe.c.o"
 
 # External object files for target 21sh
 21sh_EXTERNAL_OBJECTS =
@@ -998,9 +1068,14 @@ CMakeFiles/21sh.dir/token.c.s: cmake_force
 21sh: CMakeFiles/21sh.dir/parse_tokens.c.o
 21sh: CMakeFiles/21sh.dir/flag.c.o
 21sh: CMakeFiles/21sh.dir/token.c.o
+21sh: CMakeFiles/21sh.dir/semantica.c.o
+21sh: CMakeFiles/21sh.dir/tree.c.o
+21sh: CMakeFiles/21sh.dir/tree_ft.c.o
+21sh: CMakeFiles/21sh.dir/ampersand.c.o
+21sh: CMakeFiles/21sh.dir/pipe.c.o
 21sh: CMakeFiles/21sh.dir/build.make
 21sh: CMakeFiles/21sh.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Linking C executable 21sh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Linking C executable 21sh"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/21sh.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

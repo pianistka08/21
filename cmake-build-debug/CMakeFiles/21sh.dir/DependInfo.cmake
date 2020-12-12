@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/cassunta/Desktop/21sh/ampersand.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/ampersand.c.o"
   "/Users/cassunta/Desktop/21sh/flag.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/flag.c.o"
   "/Users/cassunta/Desktop/21sh/libft/ft_atoi.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/libft/ft_atoi.c.o"
   "/Users/cassunta/Desktop/21sh/libft/ft_bzero.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/libft/ft_bzero.c.o"
@@ -64,7 +65,11 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/cassunta/Desktop/21sh/libft/ft_wordcount.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/libft/ft_wordcount.c.o"
   "/Users/cassunta/Desktop/21sh/libft/get_next_line.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/libft/get_next_line.c.o"
   "/Users/cassunta/Desktop/21sh/parse_tokens.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/parse_tokens.c.o"
+  "/Users/cassunta/Desktop/21sh/pipe.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/pipe.c.o"
+  "/Users/cassunta/Desktop/21sh/semantica.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/semantica.c.o"
   "/Users/cassunta/Desktop/21sh/token.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/token.c.o"
+  "/Users/cassunta/Desktop/21sh/tree.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/tree.c.o"
+  "/Users/cassunta/Desktop/21sh/tree_ft.c" "/Users/cassunta/Desktop/21sh/cmake-build-debug/CMakeFiles/21sh.dir/tree_ft.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

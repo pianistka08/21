@@ -143,6 +143,33 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/build
 .PHONY : 21sh/fast
 
+ampersand.o: ampersand.c.o
+
+.PHONY : ampersand.o
+
+# target to build an object file
+ampersand.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/ampersand.c.o
+.PHONY : ampersand.c.o
+
+ampersand.i: ampersand.c.i
+
+.PHONY : ampersand.i
+
+# target to preprocess a source file
+ampersand.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/ampersand.c.i
+.PHONY : ampersand.c.i
+
+ampersand.s: ampersand.c.s
+
+.PHONY : ampersand.s
+
+# target to generate assembly for a file
+ampersand.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/ampersand.c.s
+.PHONY : ampersand.c.s
+
 flag.o: flag.c.o
 
 .PHONY : flag.o
@@ -1763,6 +1790,60 @@ parse_tokens.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/parse_tokens.c.s
 .PHONY : parse_tokens.c.s
 
+pipe.o: pipe.c.o
+
+.PHONY : pipe.o
+
+# target to build an object file
+pipe.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/pipe.c.o
+.PHONY : pipe.c.o
+
+pipe.i: pipe.c.i
+
+.PHONY : pipe.i
+
+# target to preprocess a source file
+pipe.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/pipe.c.i
+.PHONY : pipe.c.i
+
+pipe.s: pipe.c.s
+
+.PHONY : pipe.s
+
+# target to generate assembly for a file
+pipe.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/pipe.c.s
+.PHONY : pipe.c.s
+
+semantica.o: semantica.c.o
+
+.PHONY : semantica.o
+
+# target to build an object file
+semantica.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/semantica.c.o
+.PHONY : semantica.c.o
+
+semantica.i: semantica.c.i
+
+.PHONY : semantica.i
+
+# target to preprocess a source file
+semantica.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/semantica.c.i
+.PHONY : semantica.c.i
+
+semantica.s: semantica.c.s
+
+.PHONY : semantica.s
+
+# target to generate assembly for a file
+semantica.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/semantica.c.s
+.PHONY : semantica.c.s
+
 token.o: token.c.o
 
 .PHONY : token.o
@@ -1790,6 +1871,60 @@ token.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/token.c.s
 .PHONY : token.c.s
 
+tree.o: tree.c.o
+
+.PHONY : tree.o
+
+# target to build an object file
+tree.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/tree.c.o
+.PHONY : tree.c.o
+
+tree.i: tree.c.i
+
+.PHONY : tree.i
+
+# target to preprocess a source file
+tree.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/tree.c.i
+.PHONY : tree.c.i
+
+tree.s: tree.c.s
+
+.PHONY : tree.s
+
+# target to generate assembly for a file
+tree.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/tree.c.s
+.PHONY : tree.c.s
+
+tree_ft.o: tree_ft.c.o
+
+.PHONY : tree_ft.o
+
+# target to build an object file
+tree_ft.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/tree_ft.c.o
+.PHONY : tree_ft.c.o
+
+tree_ft.i: tree_ft.c.i
+
+.PHONY : tree_ft.i
+
+# target to preprocess a source file
+tree_ft.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/tree_ft.c.i
+.PHONY : tree_ft.c.i
+
+tree_ft.s: tree_ft.c.s
+
+.PHONY : tree_ft.s
+
+# target to generate assembly for a file
+tree_ft.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/21sh.dir/build.make CMakeFiles/21sh.dir/tree_ft.c.s
+.PHONY : tree_ft.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1799,6 +1934,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 21sh"
+	@echo "... ampersand.o"
+	@echo "... ampersand.i"
+	@echo "... ampersand.s"
 	@echo "... flag.o"
 	@echo "... flag.i"
 	@echo "... flag.s"
@@ -1979,9 +2117,21 @@ help:
 	@echo "... parse_tokens.o"
 	@echo "... parse_tokens.i"
 	@echo "... parse_tokens.s"
+	@echo "... pipe.o"
+	@echo "... pipe.i"
+	@echo "... pipe.s"
+	@echo "... semantica.o"
+	@echo "... semantica.i"
+	@echo "... semantica.s"
 	@echo "... token.o"
 	@echo "... token.i"
 	@echo "... token.s"
+	@echo "... tree.o"
+	@echo "... tree.i"
+	@echo "... tree.s"
+	@echo "... tree_ft.o"
+	@echo "... tree_ft.i"
+	@echo "... tree_ft.s"
 .PHONY : help
 
 

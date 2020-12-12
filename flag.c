@@ -1,11 +1,17 @@
 #include "sh.h"
 
+void 				update_flag(t_flag *flag, char s)
+{
+	if (s == 34)
+		flag->d_quot += 1;
+	if (s == 39)
+		flag->u_quot += 1;
+}
+
 void 				reset_flag(t_flag *flag)
 {
 	flag->d_quot = 0;
 	flag->u_quot = 0;
-	flag->sep = 0;
-	flag->bs = 0;
 }
 
 t_flag				*init_flag(void)
@@ -15,7 +21,5 @@ t_flag				*init_flag(void)
 	new = (t_flag *)malloc(sizeof(t_flag));
 	new->d_quot = 0;
 	new->u_quot = 0;
-	new->sep = 0;
-	new->bs = 0;
 	return (new);
 }

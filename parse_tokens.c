@@ -1,112 +1,42 @@
 #include "sh.h"
 
-int 				semantica(t_flag *flag, char *line, int i, int j)
-{
-	if (flag->d_quot % 2 != 0)
-		return (1);
-	if (flag->u_quot % 2 != 0)
-		return (1);
-	if (line[i - 1] && line[i - 1] == 92)
-		return (1);
-	if (j == 0)
-		return (2);
-	return (0);
-}
-
-void 				update_flag(t_flag *flag, char s)
-{
-	if (s == 34)
-		flag->d_quot += 1;
-	if (s == 39)
-		flag->u_quot += 1;
-	if (s == 92)
-		flag->bs += 1;
-}
-
 char 				*get_data(char *line, int *n, t_flag *flag)
 {
 	char 			res[1000];
 	int 			j;
 	char			*ret;
-	int 			i;
 
 	j = 0;
-	i = *n;
-	while (line[i] != '|' && line[i] != ';' && line[i] != '&' && line[i] != '\0')
-	 {
-		update_flag(flag, line[i]);
-		if (line[i] == 34)
-			flag->d_quot += 1;
-		if (line[i] == 39)
-			flag->u_quot += 1;
-		if (line[i] == 92)
-			flag->bs += 1;
-		res[j++] = line[i++];
-		}
-	if (line[i] == '|' || line[i] == ';' || line[i] == '&' || line[i] == '\0')
+	while (line[*n] != '\0')
 	{
-		res[j] = line[i];
-		if (semantica(flag, line, i, j) == 1)
+		while (line[*n] != '|' && line[*n] != ';' && line[*n] != '&' && line[*n] != '\0')
 		{
-			i++;
-			j++;
+			update_flag(flag, line[*n]);
+			res[j] = line[*n];
+			*n += 1;
+			j += 1;
 		}
-		if (semantica(flag, line, i, j) == 0)
+		if (line[*n] == '|' || line[*n] == ';' || line[*n] == '&' || line[*n] == '\0')
 		{
-			res[j] = '\0';
-			ret = ft_strtrim(ft_strdup(res));
-			*n = i;
-			return (ret);
-		}
-		if (semantica(flag, line, i, j) == 2)
-		{
-			if (line[i] == ';')
+			res[j] = line[*n];
+			if (semantica(flag, line, n, &j) == 0)
+				continue ;
+			if (semantica(flag, line, n, &j) == 1 && j != 0)
 			{
-				res[++j] = '\0';
+				res[j] = '\0';
 				ret = ft_strtrim(ft_strdup(res));
-				*n = i + 1;
 				return (ret);
 			}
-			if (line[i] == '|')
+			if (j == 0)
 			{
-				if (line[i + 1] == '|')
-				{
-					res[++j] = line[++i];
-					res[++j] = '\0';
-					*n = i + 1;
-					ret = ft_strtrim(ft_strdup(res));
-					return (ret);
-				}
-				else
-				{
-					res[++j] = '\0';
-					*n = i + 1;
-					ret = ft_strtrim(ft_strdup(res));
-					return (ret);
-				}
-			}
-			if (line[i] == '&')
-			{
-				if (line[i + 1] == '&')
-				{
-					res[++j] = line[++i];
-					res[++j] = '\0';
-					*n = i + 1;
-					ret = ft_strtrim(ft_strdup(res));
-					return (ret);
-				}
-				else
-				{
-					res[++j] = '\0';
-					*n = i + 1;
-					ret = ft_strtrim(ft_strdup(res));
-					return (ret);
-				}
+				ret = get_semantica_ret(line, n, res, j);
+				*n += 1;
+				return (ret);
 			}
 		}
 	}
-	*n = i;
-	return (NULL);
+	ret = ft_strtrim(ft_strdup(res));
+	return (ret);
 }
 
 int 			main(void)
@@ -116,12 +46,16 @@ int 			main(void)
 	int 		car;
 	t_flag		*flag;
 	int 		l;
+	t_tree		*tree;
+	t_token 	*cur;
 
 	line = NULL;
 	car = 0;
 	get_next_line(0, &line);
 	l = ft_strlen(line);
+	line[l] = '\0';
 	token = init_token();
+	cur = token;
 	flag = init_flag();
 	token->data = get_data(line, &car, flag);
 	while (car < l)
@@ -130,8 +64,14 @@ int 			main(void)
 		token->next->prev = token;
 		token = token->next;
 		token->data = get_data(line, &car, flag);
-
+		if (ft_strcmp(token->data, "") == 0)
+			token->data = get_data(line, &car, flag);
 	}
+	if (is_tokens_true(cur))
+		ft_putstr("true");
+	//else
+		//ft_putstr("false");
+	//	tree = get_tree(get_last_token(cur));
 	ft_putendl(line);
 	return (0);
 }

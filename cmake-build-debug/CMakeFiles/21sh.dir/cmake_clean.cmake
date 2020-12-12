@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "21sh"
   "21sh.pdb"
+  "CMakeFiles/21sh.dir/ampersand.c.o"
   "CMakeFiles/21sh.dir/flag.c.o"
   "CMakeFiles/21sh.dir/libft/ft_atoi.c.o"
   "CMakeFiles/21sh.dir/libft/ft_bzero.c.o"
@@ -61,7 +62,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/21sh.dir/libft/ft_wordcount.c.o"
   "CMakeFiles/21sh.dir/libft/get_next_line.c.o"
   "CMakeFiles/21sh.dir/parse_tokens.c.o"
+  "CMakeFiles/21sh.dir/pipe.c.o"
+  "CMakeFiles/21sh.dir/semantica.c.o"
   "CMakeFiles/21sh.dir/token.c.o"
+  "CMakeFiles/21sh.dir/tree.c.o"
+  "CMakeFiles/21sh.dir/tree_ft.c.o"
 )
 
 # Per-language clean rules from dependency scanning.
