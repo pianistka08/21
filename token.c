@@ -24,6 +24,20 @@ int 				right_row(t_token *t)
 	return (1);
 }
 
+int 				get_priority(char *s)
+{
+	//if (ft_strcmp(s, BK) == 0)
+	//return ()
+	if (ft_strcmp(s, OR) == 0)
+		return (2);
+	if (ft_strcmp(s, AND) == 0)
+		return (2);
+	if (ft_strcmp(s, PIPE) == 0)
+		return (3);
+	if (ft_strcmp(s, SC) == 0)
+		return (1);
+}
+
 int 				is_tokens_true(t_token *t)
 {
 	t_token 		*tmp;
@@ -36,7 +50,10 @@ int 				is_tokens_true(t_token *t)
 				ft_strcmp(t->data, AND) == 0 ||
 				ft_strcmp(t->data, PIPE) == 0 ||
 				ft_strcmp(t->data, SC) == 0)
+		{
 			t->type = cmd;
+			t->priority = get_priority(t->data);
+		}
 		else
 			t->type = ext;
 		t = t->next;
@@ -54,6 +71,7 @@ t_token 			*init_token(void)
 	if(!(new = (t_token *)malloc(sizeof(t_token))))
 		return (NULL);
 	new->data = NULL;
+	new->priority = 0;
 	new->next = NULL;
 	new->prev = NULL;
 	return (new);

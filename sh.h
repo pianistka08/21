@@ -22,6 +22,7 @@ typedef struct 			s_flag
 typedef struct			s_token
 {
 	char 				*data;
+	int 				priority;
 	int 				type;
 	struct s_token		*next;
 	struct s_token		*prev;
@@ -37,7 +38,7 @@ typedef struct 			s_tree
 }						t_tree;
 
 t_flag				*init_flag(void);
-void 				reset_flag(t_flag *flag);
+t_flag 				*reset_flag(t_flag *flag);
 t_token 			*init_token(void);
 t_token 			*put_data_in_new_token(char *line, int *car, t_token *token);
 void				update_flag(t_flag *flag, char s);

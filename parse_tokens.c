@@ -66,6 +66,7 @@ int 			main(void)
 		token->data = get_data(line, &car, flag);
 		if (ft_strcmp(token->data, "") == 0)
 			token->data = get_data(line, &car, flag);
+		flag = reset_flag(flag);
 	}
 	if (is_tokens_true(cur))
 		ft_putstr("true");

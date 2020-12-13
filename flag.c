@@ -8,10 +8,11 @@ void 				update_flag(t_flag *flag, char s)
 		flag->u_quot += 1;
 }
 
-void 				reset_flag(t_flag *flag)
+t_flag				*reset_flag(t_flag *flag)
 {
 	flag->d_quot = 0;
 	flag->u_quot = 0;
+	return (flag);
 }
 
 t_flag				*init_flag(void)
