@@ -69,10 +69,8 @@ int 			main(void)
 		flag = reset_flag(flag);
 	}
 	if (is_tokens_true(cur))
-		ft_putstr("true");
-	//else
-		//ft_putstr("false");
-	//	tree = get_tree(get_last_token(cur));
+		ft_putendl("true");
+	tree = get_tree(cur);
 	ft_putendl(line);
 	return (0);
 }

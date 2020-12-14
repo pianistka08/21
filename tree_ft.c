@@ -14,7 +14,7 @@ void 			*init_tree(void)
 	t_tree 		*new;
 
 	new = (t_tree *)malloc(sizeof(t_tree));
-	new->data = NULL;
+	new->token = NULL;
 	new->left = NULL;
 	new->right = NULL;
 	new->parent = NULL;

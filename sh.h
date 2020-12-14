@@ -19,6 +19,15 @@ typedef struct 			s_flag
 	int 				u_quot; /// ' отменяет все спецсимволами
 }						t_flag;
 
+typedef struct 			s_tree
+{
+	struct s_token		*token;
+	int 				type;
+	struct s_tree		*parent;
+	struct s_tree		*left;
+	struct s_tree		*right;
+}						t_tree;
+
 typedef struct			s_token
 {
 	char 				*data;
@@ -27,15 +36,6 @@ typedef struct			s_token
 	struct s_token		*next;
 	struct s_token		*prev;
 }						t_token;
-
-typedef struct 			s_tree
-{
-	char 				*data;
-	int 				type;
-	struct s_tree		*parent;
-	struct s_tree		*left;
-	struct s_tree		*right;
-}						t_tree;
 
 t_flag				*init_flag(void);
 t_flag 				*reset_flag(t_flag *flag);
@@ -55,5 +55,6 @@ t_token 			*get_last_token(t_token *t);
 char 			*if_ampersand(char *line, int *i, char *res, int j);
 char 			*if_vertical_bar(char *line, int *i, char *res, int j);
 char 			*get_semantica_ret(char *line, int *i, char *res, int j);
+t_tree				*get_tree(t_token *token);
 
 #endif
