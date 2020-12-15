@@ -66,12 +66,13 @@ t_tree				*get_tree(t_token *token)
 
 t_token 			*third_priority(t_token *t)
 {
-	while (t)
+	while (t && t->priority != -1)
 	{
-		if (ft_strcmp(t->data, PIPE) == 0)
+		if (ft_strcmp(t->data, PIPE) == 0 && t->priority != -1)
 		{
-			if (t->next->prev)
-				t->next->prev = NULL;
+			/*if (t->next->prev)
+				t->next->prev = NULL;*/
+			t->priority = -1;
 			return (t);
 		}
 		t = t->prev;
@@ -81,12 +82,13 @@ t_token 			*third_priority(t_token *t)
 
 t_token 			*second_priority(t_token *t)
 {
-	while (t)
+	while (t && t->priority != -1)
 	{
-		if (ft_strcmp(t->data, OR) == 0 || ft_strcmp(t->data, AND) == 0)
+		if ((ft_strcmp(t->data, OR) == 0 || ft_strcmp(t->data, AND) == 0) && t->priority != -1)
 		{
-			if (t->next->prev)
-				t->next->prev = NULL;
+			/*if (t->next->prev)
+				t->next->prev = NULL;*/
+			t->priority = -1;
 			return (t);
 		}
 		t = t->prev;
@@ -96,11 +98,13 @@ t_token 			*second_priority(t_token *t)
 
 t_token 			*first_priority(t_token *t)
 {
-	while (t)
+	while (t && t->priority != -1)
 	{
-		if (ft_strcmp(t->data, SC) == 0) {
-			if (t->next->prev)
-				t->next->prev = NULL;
+		if (ft_strcmp(t->data, SC) == 0 && t->priority != -1)
+		{
+			/*if (t->next->prev)
+				t->next->prev = NULL;*/
+			t->priority = -1;
 			return (t);
 		}
 		t = t->prev;
@@ -113,32 +117,33 @@ t_token 			*find_priority(t_token *t)
 	t_token			*cur;
 	t_token 		*res;
 
-	cur = t;
-	if (cur->priority == -1)
+	if (t == NULL)
 		return (NULL);
-	res = first_priority(cur);
-	if (res != NULL)
-	{
-		res->priority = -1;
-		return (res);
-	}
-	res = second_priority(cur);
-	if (res != NULL)
-	{
-		res->priority = -1;
-		return (res);
-	}
-	res = third_priority(cur);
-	if (res != NULL)
-	{
-		res->priority = -1;
-		return (res);
-	}
-	if (res == NULL)
-	{
-		cur->priority = -1;
-		return (cur);
-	}
+	while (t && t->priority == -1)
+		t = t->prev;
+	cur = t;
+
+		res = first_priority(cur);
+		if (res != NULL)
+		{
+			res->priority = -1;
+			return (res);
+		}
+		res = second_priority(cur);
+		if (res != NULL) {
+			res->priority = -1;
+			return (res);
+		}
+		res = third_priority(cur);
+		if (res != NULL) {
+			res->priority = -1;
+			return (res);
+		}
+		if (res == NULL)
+		{
+			cur->priority = -1;
+			return (cur);
+		}
 }
 
 t_token 			*find_alive(t_token *t)
@@ -178,22 +183,54 @@ t_tree				*get_tree(t_token *t)
 	}
 	while (cur != root)
 	{
-		if (cur->parent)
-			data = cur->parent->token->prev;
-		cur->parent->left = init_tree();
-		cur_r = cur->parent->left;
-		cur_r->parent = cur->parent;
-		while (data->priority != -1)
+		if (cur->token->type == 0)
 		{
-			cur_r->token = find_priority(data);
-			if (data->priority != -1)
+			if (cur->right == NULL)
+			{
+				cur_r = init_tree();
+				cur->right = cur_r;
+				cur_r->parent = cur;
+				cur_r->token = find_priority(data);
+			}
+			if (cur->right != NULL && cur->left == NULL)
+			{
+				cur_r = init_tree();
+				cur->left = cur_r;
+				cur_r->parent = cur;
+				cur_r->token = find_priority(data);
+			}
+		}
+		if (cur->parent && cur->token->type == 1)
+		{
+			//if (cur->parent->token->prev->priority != 1)
+				//data = cur->parent->token->prev;
+			if (cur->parent->right == NULL)
+			{
+				cur->parent->right = init_tree();
+				cur_r = cur->parent->right;
+			}
+			if ((cur->parent->right != NULL) && cur->parent->left == NULL) {
+				cur->parent->left = init_tree();
+				cur_r = cur->parent->left;
+			}
+			cur_r->parent = cur->parent;
+		}
+		//while (data->priority != -1)
+		cur_r->token = find_priority(data);
+		/*if (data->priority != -1)
+		{*/
+			//cur_r->token = find_priority(data);
+			/*if (data->priority != -1)
 			{
 				cur_r->left = init_tree();
 				cur_r->left->parent = cur_r;
 				cur_r = cur_r->left;
-			}
-		}
-		cur = cur->parent;
+			}*/
+		//}
+		if (cur_r->token->type == 1)
+			cur = cur->parent;
+		if (cur_r->token->type == 0)
+			cur = cur_r;
 	}
 	return (root);
 }
