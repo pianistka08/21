@@ -147,20 +147,6 @@ t_token 			*find_priority(t_token *t)
 		}
 }
 
-t_token 			*find_alive(t_token *t)
-{
-	t_token 		*res;
-
-	res = get_last_token(t);
-	while (res)
-	{
-		if (res->priority != -1)
-			return (res);
-
-	}
-	return (NULL);
-}
-
 t_tree				*get_tree(t_token *t)
 {
 	t_tree 			*root;
@@ -228,7 +214,22 @@ t_tree				*get_tree(t_token *t)
 			cur = cur_r;
 	}
 	cur = root;
-	while (cur->token != t)
+	if (root->token->prev)
+	{
+		cur->left = init_tree();
+		cur_r = cur->left;
+		cur_r->parent = cur;
+		cur_r->token = find_priority(data);
+		cur = cur_r;
+	}
+	while (root->token->prev->priority != -1)
+	{
+		cur->right = init_tree();
+		cur->right->parent = cur;
+		cur = cur->right;
+		cur->token = find_priority(data);
+	}
+	while (cur_r->token != t)
 	{
 		if (cur->token->type == 0)
 		{
@@ -244,7 +245,8 @@ t_tree				*get_tree(t_token *t)
 				cur_r->parent = cur;
 				cur_r->token = find_priority(data);
 			}
-			if (cur->right != NULL && cur->left == NULL) {
+			if (cur->right != NULL && cur->left == NULL)
+			{
 				cur_r = init_tree();
 				cur->left = cur_r;
 				cur_r->parent = cur;
@@ -258,8 +260,7 @@ t_tree				*get_tree(t_token *t)
 				cur->parent->right = init_tree();
 				cur_r = cur->parent->right;
 			}
-			if ((cur->parent->right != NULL) && cur->parent->left == NULL)
-			{
+			if ((cur->parent->right != NULL) && cur->parent->left == NULL) {
 				cur->parent->left = init_tree();
 				cur_r = cur->parent->left;
 			}
@@ -273,52 +274,5 @@ t_tree				*get_tree(t_token *t)
 		if (cur_r->token->type == 0 && cur_r->left == NULL)
 			cur = cur_r;
 	}
-
-	/*if (cur->token->type == 0)
-	{
-		if (cur->right != NULL && cur->left != NULL)
-		{
-			cur = cur->left;
-			continue;
-		}
-		if (cur->left == NULL)
-		{
-			cur_r = init_tree();
-			cur->left = cur_r;
-			cur_r->parent = cur;
-			cur_r->token = find_priority(data);
-			cur = cur_r;
-			continue;
-		}
-		if (cur->left != NULL && cur->right == NULL)
-		{
-			cur_r = init_tree();
-			cur->right = cur_r;
-			cur_r->parent = cur;
-			cur_r->token = find_priority(data);
-			cur = cur_r;
-			continue;
-		}
-	}
-	if (cur->parent && cur->token->type == 1)
-	{
-		if (cur->parent->left == NULL)
-		{
-			cur->parent->right = init_tree();
-			cur_r = cur->parent->right;
-		}
-		if ((cur->parent->left != NULL) && cur->parent->right == NULL) {
-			cur->parent->right = init_tree();
-			cur_r = cur->parent->right;
-		}
-		cur_r->parent = cur->parent;
-		cur_r->token = find_priority(data);
-	}
-	if (cur_r->token->type == 1)
-		cur = cur->parent;*/
-	/*if (cur_r->token->type == 0 && cur_r->right != NULL && cur_r->left != NULL)
-		cur = cur_r->parent;
-	if (cur_r->token->type == 0 && cur_r->right == NULL)
-		cur = cur_r;*/
 	return (root);
 }
